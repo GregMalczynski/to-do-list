@@ -52,11 +52,11 @@ function addFunction() {
 
     let inputTime = time.value;
 
-    if ( inputValue === null || inputValue === '') {
+    if ( !inputValue ) {
         message.innerHTML = 'Task cannot be empty';
         return;
     }
-    else if ( inputTime === null || inputTime === '') {
+    else if ( !inputTime ) {
         message.innerHTML = 'Time cannot be empty';
         return;
     } else {
@@ -105,10 +105,10 @@ function addFunction() {
             actualTime(new Date(), actualTimeArr);
             actualTime(new Date(Date.now() + 10000), actualTimeRemainArr);
 
-            let timeSum = actualTimeArr.slice(-1);
-            let timeRemain = actualTimeRemainArr.slice(-1);
+            let timeSum = actualTimeArr.slice(-1).toString();
+            let timeRemain = actualTimeRemainArr.slice(-1).toString();
 
-            if ( list.children[k].children[1].innerHTML == timeRemain ) {
+            if ( list.children[k].children[1].innerHTML === timeRemain ) {
     
                 if ( list.children[k].children[0].getAttribute ) {
                     list.children[k].children[0].classList.add('added');
@@ -117,7 +117,7 @@ function addFunction() {
                 const audio = new Audio('./sounds/alarm-clock-01.mp3');
                 audio.play();
 
-            } else if ( list.children[k].children[1].innerHTML == timeSum ) {
+            } else if ( list.children[k].children[1].innerHTML === timeSum ) {
                 showLi.classList.remove('added');
                 list.removeChild(list.firstChild);
                 i-- ;
