@@ -46,7 +46,6 @@ let i = 0;
 btn.addEventListener('click', addFunction );
 
 function addFunction() {
-
    
     let inputValue = input.value;
 
