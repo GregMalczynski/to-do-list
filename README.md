@@ -4,7 +4,7 @@ The application includes a to-do list, where we enter the tasks to be done and t
 
 ## Screenshots
 
-![App Screenshot]()
+![App Screenshot](https://github.com/GregMalczynski/to-do-list/blob/master/screen-shots/screen-1.jpg?raw=true)
 
 ## Used Technologies
 
